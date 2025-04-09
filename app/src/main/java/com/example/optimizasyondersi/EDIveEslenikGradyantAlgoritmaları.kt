@@ -3,7 +3,7 @@ package com.example.optimizasyondersi
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-class Algoritmalar(var x1: Double, var x2: Double, var x3: Double, var epsilon: Double, var a: Double) {
+class EDIveEslenikGradyantAlgoritmaları(var x1: Double, var x2: Double, var x3: Double, var epsilon: Double, var a: Double) {
 
     //Gradyenti hesapla
     fun gradyentHesapla(x1: Double, x2: Double, x3: Double): List<Double> {

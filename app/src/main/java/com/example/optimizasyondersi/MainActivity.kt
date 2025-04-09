@@ -23,45 +23,5 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-
-
-        binding.buttonEnDikInis.setOnClickListener {
-            var algoritma = Algoritmalar(
-                binding.inputTextx1.text.toString().toDouble(),
-                binding.inputTextx2.text.toString().toDouble(),
-                binding.inputTextx3.text.toString().toDouble(),
-                binding.inputTextEpsilon.text.toString().toDouble(),
-                binding.inputTextAdimBuyuklugu.text.toString().toDouble()
-            )
-
-            var listEDI = algoritma.minimizeEnDikInis()
-            binding.textViewSonucx1.text = listEDI[0].toString()
-            binding.textViewSonucx2.text = listEDI[1].toString()
-            binding.textViewSonucx3.text = listEDI[2].toString()
-
-            binding.textViewSonucIterasyon.text = listEDI[3].toString()
-        }
-
-        binding.buttonEslenikGradyant.setOnClickListener {
-            var algoritma = Algoritmalar(
-                binding.inputTextx1.text.toString().toDouble(),
-                binding.inputTextx2.text.toString().toDouble(),
-                binding.inputTextx3.text.toString().toDouble(),
-                binding.inputTextEpsilon.text.toString().toDouble(),
-                binding.inputTextAdimBuyuklugu.text.toString().toDouble()
-            )
-            var listEslenik =
-                algoritma.minimizeEslenik()
-            binding.textViewEGx1.text = listEslenik[0].toString()
-            binding.textViewEGx2.text = listEslenik[1].toString()
-            binding.textViewEGx3.text = listEslenik[2].toString()
-
-            binding.textViewSonucIterasyonED.text = listEslenik[3].toString()
-
-            if(listEslenik[3] == 10001.0){
-                Toast.makeText(this,"Sonsuz iterasyon oluştu!!!",Toast.LENGTH_SHORT).show()
-            }
-        }
-
     }
 }

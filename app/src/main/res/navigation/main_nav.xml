@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.optimizasyondersi.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/EDIveEslenikGradyantFragment"
+        android:name="com.example.optimizasyondersi.EDIveEslenikGradyantFragment"
+        android:label="fragment_e_d_ive_eslenik_gradyant"
+        tools:layout="@layout/fragment_e_d_ive_eslenik_gradyant" />
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.example.optimizasyondersi.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/anaSayfaToEDIveEslenik"
+            app:destination="@id/EDIveEslenikGradyantFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_isilIslemFragment"
+            app:destination="@id/isilIslemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/isilIslemFragment"
+        android:name="com.example.optimizasyondersi.IsilIslemFragment"
+        android:label="fragment_isil_islem"
+        tools:layout="@layout/fragment_isil_islem" />
+</navigation>
